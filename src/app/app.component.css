@@ -1,0 +1,18 @@
+.pos-rel {
+  position: relative;
+}
+.state-container-dropdown {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  max-height: 500px;
+  background-color: rgb(236, 198, 198);
+  overflow-y: auto;
+}
+.stateList {
+  border-bottom: 1px solid #333333;
+  padding: 7px 3px;
+}
+.stateList:hover{
+  background-color: aliceblue;
+}

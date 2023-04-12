@@ -1,0 +1,29 @@
+<p>
+  app works!
+  <br />
+</p>
+<form [formGroup]="stateForm">
+  <input
+    type="text"
+    placeholder="select states"
+    formControlName="search"
+    (click)="openSelection()"
+  />
+  <div
+    clickOutside
+    (clickOutside)="openSelection()"
+    class="state-container-dropdown"
+    *ngIf="showState"
+  >
+    <!-- <ng-container *ngIf="showState"> -->
+    <div
+      (click)="searchValue(state)"
+      class="stateList"
+      *ngFor="let state of states | searchFilter: getSearchValue()"
+    >
+      {{ state }}
+    </div>
+    <!-- </ng-container> -->
+  </div>
+  <p title="{{ textTrunc }}">{{ textTrunc | truncate: 5 }}</p>
+</form>
